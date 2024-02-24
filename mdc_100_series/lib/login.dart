@@ -27,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool _isInvalid = false;
+  bool _isObscure = true; // State to manage password visibility
 
   @override
   Widget build(BuildContext context) {
@@ -66,10 +67,21 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(height: 12.0),
                   TextFormField(
                     controller: _passwordController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Password',
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _isObscure = !_isObscure;
+                          });
+                        },
+                        icon: Icon(_isObscure
+                            ? Icons.visibility
+                            : Icons.visibility_off),
+                      ),
                     ),
-                    obscureText: true,
+                    obscureText:
+                        _isObscure, // Use the state to determine text visibility
                     validator: (value) {
                       if (value != 'user') {
                         return 'Invalid password';

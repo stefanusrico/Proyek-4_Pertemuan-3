@@ -9,7 +9,7 @@ Screenshot hasil modifikasi :
 
 1. Menambahkan validasi pada login form
 
-![image](https://github.com/stefanusrico/Proyek-4_Pertemuan-3/assets/111185559/61b99701-c1da-4d99-915b-4e740a6e409e)
+![image](https://github.com/stefanusrico/Proyek-4_Pertemuan-3/assets/111185559/fd007236-21fb-43da-a598-30c857aec026)
 
 2. Menambahkan dark theme, jadi terdapat dua theme
 
